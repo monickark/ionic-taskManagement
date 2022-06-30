@@ -1,0 +1,25 @@
+.report-header {
+  font-size: 1.2em;
+  margin: 2em 0em 0em 0em;
+  padding: 1em 0em 1em 5px;
+  clear: both;
+  background-color: #1796b9;
+  font-weight: 500;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+.report-header:first-child {
+  margin-top: 0em;
+  padding-left: 1em;
+}
+.table-sm td, .table-sm th {
+  padding: .4rem 0.3rem 0.4rem 1.3rem;
+}
+.table {
+  width: 100%;
+  background-color: #b5e6f5;
+  padding: 1em;
+}
+h1.heading {
+  margin-top: 2em;
+}

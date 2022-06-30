@@ -1,0 +1,146 @@
+/* You can add global styles to this file, and also import other style files */
+.col {
+  float: left;
+}
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+  color: #56668b;
+  font-weight: 600;
+  background: linear-gradient(to right,#f0f2e4,#ffffff);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
+  font-size: 1.3em;
+  line-height: 1EM;
+  PADDING: 3PX;
+}
+.page-header.page-header-modern.page-header-background {
+  padding: 40px 0;
+  background-size: cover;
+}
+.overlay {
+  position: relative;
+}
+.page-header {
+  background-color: #212529;
+  margin: 0 0 35px 0;
+  padding: 30px 0;
+  position: relative;
+  text-align: left;
+  background: url('assets/img/bg/banner.jpg');
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.page-header .breadcrumb > li {
+  display: inline-block;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  text-shadow: none;
+}
+.page-header .breadcrumb > li + li:before {
+  color: inherit;
+  opacity: 0.5;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f105";
+  padding: 0 7px 0 5px;
+}
+.page-header .breadcrumb.breadcrumb-light {
+  color: #FFF;
+}
+.page-header .breadcrumb {
+  background: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+  .page-header.page-header-modern h1 {
+    font-size: 40px;
+    font-weight: 900;
+}
+.page-header h1 {
+  color: #fff;
+  display: inline-block;
+  font-size: 30px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  position: relative;
+  top: 1px;
+}
+button.btn.btn-primary, button.btn.btn-info {
+  margin-top: 2em;
+}
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #007bff;
+}
+.table-bordered, .table-bordered td, .table-bordered th {
+  border: 3px solid #627a92 !important;
+}
+
+.table td, .table th {
+  padding: .75rem;
+  vertical-align: top;
+  border-top: 1px solid #1896bc;
+}
+th {
+  text-transform: uppercase;
+  color: #627a92;
+  font-size: 1.2em;
+  background: linear-gradient(to right,#f6b808,#f0f0f1);
+}
+.alert.alert-sucess {
+  color: white;
+  background-color: green;
+}
+.alert.alert-error {
+  color: white;
+  background-color: red;
+  background: linear-gradient(to right,#ff0000,#ffffff);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
+}
+section.page-header {
+  margin-top: 5em;
+}
+section h4 {
+  font-size: 1.5rem;
+  color: #f3b406;
+}
+
+body {
+   background: url(assets/img/bg/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.form-control {
+  color: #dc8b0a !important;
+  font-weight: 700 !important;
+  border: 2px solid #627a92 !important;
+  background: linear-gradient(to right,#f1f3e5,#fff);
+}
+.submit-btn {
+  margin-top: 0em  !important;
+  color: #fff !important;
+  background-color: #90a6ae !important;
+  border-color: #627a92 !important;
+  font-size: 1.2em !important;
+  border-width: 2px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .12), 0 1px 10px 0 rgba(0, 0, 0, .24) !important;
+}
+
+.submit-btn:hover {
+  color: #384360 !important;
+  background-color: #ffffff  !important;
+  border-color: #384360  !important;
+}
+tbody {
+  background: linear-gradient(to right,#6a8399,#ffffff);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
+  color: #f7ba09;
+  font-weight: 600;
+}

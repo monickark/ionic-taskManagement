@@ -1,0 +1,67 @@
+<section
+  class="page-header page-header-modern page-header-background page-header-background-sm overlay
+  overlay-color-primary overlay-show overlay-op-8 mb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 align-self-center p-static order-2">
+        <h1>DART - PLANNER</h1>
+        <h4>A page to plan our daily work</h4>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container">
+  <div class="row">
+    <form #dartForm='ngForm' (ngSubmit)='onSubmit(inputName.value)'>
+      <div class="row">
+        <div class="form-group col col-12">
+          <div *ngIf="message" class="alert alert-sucess">{{message}}</div>
+          <div class="form-group col col-6">
+            <label for="username">Name: </label>
+            <select #inputName class="form-control" id="username">
+              <option>SELECT</option>
+              <option>Monicka</option>
+              <option>Hema</option>
+              <option>Ramesh</option>
+              <option>Madhavan</option>
+              <option>Aadhavan</option>
+              <option>Madhan</option>
+              <option>Prasanth</option>
+            </select>
+          </div>
+          <div class="form-group col col-6">
+            <label for="date">Date:</label>
+            <input type="text" value="{{curDate | date:'dd/MM/yyyy'}}" class="form-control" id="date" readonly>
+          </div>
+        </div>
+      </div>
+      <div class="form-group col col-12">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <!-- <th scope="col">S.No</th> -->
+              <th scope="col">From time</th>
+              <th scope="col">To time</th>
+              <th scope="col">Planned task</th>
+              <th scope="col">Remarks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let dart of darts;let index = index; trackBy:trackByIndex;" scope="row">
+              <td><input type='text' class="form-control" name='from-{{index}}' [(ngModel)]="dart.fromTime" /></td>
+              <td><input type='text' class="form-control" #toTime='ngModel' name='toTime-{{index}}'
+                  [(ngModel)]=dart.toTime /></td>
+              <td><input type='text' class="form-control" #plannedTask='ngModel' name='plannedTask-{{index}}'
+                  [(ngModel)]=dart.plannedTask /></td>
+              <td><input type='text' class="form-control" #remarks='ngModel' name='remarks-{{index}}'
+                  [(ngModel)]=dart.remarks /></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="form-group">
+          <button class="btn btn-primary submit-btn" type='submit'>Add Day Plan</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

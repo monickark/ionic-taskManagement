@@ -1,0 +1,64 @@
+<section
+  class="page-header page-header-modern page-header-background page-header-background-sm overlay overlay-color-primary overlay-show overlay-op-8 mb-5"
+  >
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 align-self-center p-static order-2">
+        <h1>DART - Version History</h1>
+        <h4>Users can see the evolution of DART application.</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="row">
+    <form [formGroup]="registrationForm">
+      <div class="form-group col col-12">
+        <div *ngIf="message" class="alert alert-sucess">{{message}}</div>
+        <div class="form-group col col-md-4">
+          <label>Version No</label>
+          <input type="text" #versionNo class="form-control" formControlName="versionNo" />
+        </div>
+        <div class="form-group col col-md-4">
+          <label >Date Changed</label>
+          <input type="text" #dateChanged class="form-control" formControlName="dateChanged" />
+        </div>
+        <div class="form-group col col-md-4">
+          <label >Bug Fixed</label>
+          <input type="text" #bugFixed class="form-control" formControlName="bugFixed" />
+        </div>
+        <div class="form-group col col-md-4">
+          <label >Changes</label>
+          <input type="text" #changes class="form-control" formControlName="changes" />
+        </div>
+        <div class="form-group col col-md-4">
+          <button (click)="createHistory(dateChanged.value, bugFixed.value,
+      changes.value,versionNo.value)" class="btn btn-primary">
+            Submit
+          </button>
+        </div>
+      </div>
+      <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <!-- <th scope="col">S.No</th> -->
+              <th scope="col">Date Changed</th>
+              <th scope="col">Bug Fixed</th>
+              <th scope="col">Changes</th>
+              <th scope="col">Version No</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let history of histories; let index = index; trackBy:trackByIndex;" scope="row">
+                <td>{{history.dateChanged}}</td>
+                <td>{{history.bugFixed}} </td>
+                <td>{{history.changes}}</td>
+                <td>{{history.versionNo}} </td>
+            </tr>
+          </tbody>
+        </table>
+    </form>
+  </div>
+  </div>
+

@@ -1,0 +1,87 @@
+<StackLayout>
+  <Label text="QueryComponent works" textWrap="true"></Label>
+  <Label text="This is a migrated component" textWrap="true"></Label>
+  <Label text="Update it to provide the UI elements required in your mobile app" textWrap="true"></Label>
+
+  <ListPicker [items]="users" selectedIndex="0" (selectedIndexChange)="selectedIndexChanged($event)" class="p-15"></ListPicker>
+</StackLayout>
+
+<!--
+Original Web template:
+
+
+<section
+  class="page-header page-header-modern page-header-background page-header-background-sm overlay overlay-color-primary overlay-show overlay-op-8 mb-5"
+  >
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 align-self-center p-static order-2">
+        <h1>DART - Query</h1>
+        <h4>Users can post all their queries reagrding this application, and will be solved in next release...</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="row">
+    <form [formGroup]="queryForm" (ngSubmit)='onSubmit()' class="form form-register">
+      <div class="row">
+        <div class="form-group col col-12">
+          <div *ngIf="errorMessage" class="alert alert-error">{{errorMessage}}</div>
+          <div *ngIf="message" class="alert alert-sucess">{{message}}</div>
+          <div class="form-group col col-4">
+            <label for="username">Name: </label>
+            <select formControlName="userName" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && formControl.userName.errors }">
+              <option value="">SELECT</option>
+              <option value="Monicka">Monicka</option>
+              <option value="Hema">Hema</option>
+              <option value="Ramesh">Ramesh</option>
+              <option value="Madhavan">Madhavan</option>
+              <option value="Aadhavan">Aadhavan</option>
+              <option value="Madhan">Madhan</option>
+              <option value="Prasanth">Prasanth</option>
+            </select>
+            <div *ngIf="submitted && !!formControl.userName.errors" class="invalid-feedback">
+              <div *ngIf="!!formControl.userName.errors.required">Name is required</div>
+            </div>
+          </div>
+          <div class="form-group col col-4">
+            <label for="query">Query:</label>
+            <input formControlName="query" type="text" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && formControl.query.errors }">
+            <div *ngIf="submitted && !!formControl.query.errors" class="invalid-feedback">
+              <div *ngIf="!!formControl.query.errors.required">Query is required</div>
+            </div>
+          </div>
+
+
+          <div class="form-group col col-4">
+            <button class="form-control btn btn-info" type='submit' >Submit</button>
+          </div>
+        </div>
+      </div>
+
+      <table class="table table-bordered table-striped" *ngIf="showMyContainer">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Date</th>
+            <th scope="col">Query</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let query of queries; let index = index; trackBy:trackByIndex;" scope="row">
+            <td>{{query.userName}}</td>
+            <td>{{query.date}}</td>
+            <td>{{query.query}} </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </form>
+  </div>
+</div>
+
+-->
